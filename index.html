@@ -14,37 +14,63 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- google font cdn -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
     <!-- font awesome cdn -->
-    <script src="https://kit.fontawesome.com/d4ee3cb961.js" crossorigin="anonymous"></script>
-       <!-- Tailwind CSS cdn -->
-       <script>
-         tailwind.config = {
-           theme: {
-             extend: {
-                colors: {
-                "main-clr": '#179800',
-                "bg-clr": '#EFEBE3',
-                 },
-                fontSize: {
-                 hero: "clamp(2.25rem, 1.7188841201716738rem + 3.0901287553648067vw, 4.5rem)",
-   
-                 h1: "clamp(1.875rem, 1.6094420600858368rem + 1.5450643776824033vw, 3rem)",
-   
-                 h2: "clamp(1.5rem, 1.3819742489270386rem + 0.6866952789699571vw, 2rem)",
-   
-                 h3: "clamp(1.25rem, 0.95rem + 0.25vw, 1.25rem)",
-               },
-             },
-           },
-         };
-       </script>
+    <script
+      src="https://kit.fontawesome.com/d4ee3cb961.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Tailwind CSS cdn -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "main-clr": "#179800",
+              "bg-clr": "#EFEBE3",
+            },
+            fontSize: {
+              hero: "clamp(2.25rem, 1.7188841201716738rem + 3.0901287553648067vw, 4.5rem)",
+
+              h1: "clamp(1.875rem, 1.6094420600858368rem + 1.5450643776824033vw, 3rem)",
+
+              h2: "clamp(1.5rem, 1.3819742489270386rem + 0.6866952789699571vw, 2rem)",
+
+              h3: "clamp(1.25rem, 0.95rem + 0.25vw, 1.25rem)",
+            },
+          },
+        },
+      };
+    </script>
     <!-- styles -->
     <style>
-      *{
+      * {
         font-family: Sora;
+      }
+      .h::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        border-radius: 20px;
+        width: 50%;
+        height: 100%;
+        background: rgba(46, 240, 79, 0.116);
+        animation: swipe 1s ease-in-out infinite alternate;
+      }
+      @keyframes swipe {
+          0% {
+            left: -10%;
+            width: 70%;
+          }        
+          100% {
+            left: 100%;
+            width: 1%;
+          }
       }
     </style>
   </head>
@@ -52,12 +78,16 @@
     <!-- header section -->
     <header class="mt-6 bg-gradient-to-b from-[#FFFFFF] via-bg-clr to-bg-clr">
       <!-- nav bar -->
-       <nav class="max-w-[1440px] mx-auto">
-        <div class="mx-6 flex justify-between items-center ">
+      <nav class="max-w-[1440px] mx-auto">
+        <div class="mx-6 flex justify-between items-center">
           <div class="nav-start">
             <div class="nav-img-container">
-              <img class="sm:hidden" src="content/c2-assets/Group.png" alt="">
-              <img class="hidden sm:block" src="content/c2-assets/logo-header.png" alt="logo">
+              <img class="sm:hidden" src="content/c2-assets/Group.png" alt="" />
+              <img
+                class="hidden sm:block"
+                src="content/c2-assets/logo-header.png"
+                alt="logo"
+              />
             </div>
           </div>
           <div class="nav-middle hidden lg:block">
@@ -69,38 +99,57 @@
           </div>
           <div class="nav-end flex justify-center items-center gap-4">
             <div class="nav-end-container md:flex items-center gap-5 hidden">
-              <div class="search-container"><i class="fa-solid fa-magnifying-glass"></i></div>
-            <div class="chart-container"><i class="fa-solid fa-cart-shopping"></i></div>
-            <div class="log-btn-container">
-              <button class="btn bg-transparent border border-main-clr text-xl">Login</button>
-            </div>
-            <div class="register-btn-container">
-              <button class="btn bg-main-clr text-white text-xl">Register</button>
-            </div>
+              <div class="search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="chart-container">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="log-btn-container">
+                <button
+                  class="btn bg-transparent border border-main-clr text-xl"
+                >
+                  Login
+                </button>
+              </div>
+              <div class="register-btn-container">
+                <button class="btn bg-main-clr text-white text-xl">
+                  Register
+                </button>
+              </div>
             </div>
             <div class="menu-container cursor-pointer lg:hidden">
               <i class="fa-solid fa-bars w-7 h-7"></i>
             </div>
           </div>
         </div>
-
-       </nav>
-       <hr class="sm:hidden border border-main-clr mt-4">
-       <!-- hero section -->
-       <div class="hero-sec mx-6 my-7 sm:my-10 md:my-14 lg:my-16">
+      </nav>
+      <hr class="sm:hidden border border-main-clr mt-4" />
+      <!-- hero section -->
+      <div class="hero-sec mx-6 my-7 sm:my-10 md:my-14 lg:my-16">
         <div class="hero-wrap">
           <div class="hr space-y-3">
-            <h1 class="text-h1 text-center">Freshness <span class="text-main-clr font-bold">You Can <br>
-              Count</span> On, Prices You’ll Love!</h1>
-              <p class="text-center">
-                Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day!
+            <div class="flex flex-col items-center">
+              <h1
+                class="text-h1 text-center max-w-[22ch] animate-bounce"
+              >
+                Freshness
+                <span class="text-main-clr font-bold">You Can Count</span> On,
+                Prices You’ll Love!
+              </h1>
+
+              <p class="h relative py-6 text-center max-w-[50ch]
+               before:">
+                Shop your daily essentials at unbeatable prices. From fresh
+                produce to pantry staples, we’ve got you covered every day!
               </p>
-              <div class="hero-img-container flex justify-center">
-                <img src="content/c2-assets/hero-vegetables.png" alt="">
-              </div>
+            </div>
+            <div class="hero-img-container flex justify-center">
+              <img src="content/c2-assets/hero-vegetables.png" alt="" />
+            </div>
           </div>
         </div>
-       </div>
+      </div>
     </header>
 
     <!-- main section -->
@@ -108,66 +157,85 @@
       <!-- service -->
       <div class="service-wrapper max-w-[1440px] mx-auto">
         <div class="cards-wrap mx-6">
-          <h1 class="text-h1 text-main-clr mt-16 mb-6">Services</h1>
+          <h1 class="text-h1 text-main-clr mt-16 mb-6 font-black">Services</h1>
           <div class="cards flex flex-col md:flex-row gap-4">
             <!-- card 111 -->
-          <div class="card1 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
-            <div class="card-img-container flex justify-center">
-              <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
-                <img src="content/c2-assets/service.png" alt="service">
+            <div class="card1 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
+              <div class="card-img-container flex justify-center">
+                <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
+                  <img src="content/c2-assets/service.png" alt="service" />
+                </div>
               </div>
+              <h2 class="font-bold text-h2 text-center">24/7 Services</h2>
+              <p class="text-center pb-8">
+                Experience reliable 24/7 service with instant support, ensuring
+                seamless assistance anytime, anywhere for your convenience and
+                peace of mind.
+              </p>
             </div>
-            <h2 class="font-bold text-h2 text-center">24/7 Services </h2>
-            <p class="text-center pb-8">Experience reliable 24/7 service with instant support, ensuring seamless assistance anytime, anywhere for your convenience and peace of mind.</p>
-          </div>
 
-          <!-- card 222 -->
-          <div class="card2 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
-            <div class="card-img-container flex justify-center">
-              <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
-                <img src="content/c2-assets/delivery.png" alt="service">
+            <!-- card 222 -->
+            <div class="card2 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
+              <div class="card-img-container flex justify-center">
+                <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
+                  <img src="content/c2-assets/delivery.png" alt="service" />
+                </div>
               </div>
+              <h2 class="font-bold text-h2 text-center">Fast Delivery</h2>
+              <p class="text-center pb-8">
+                Enjoy lightning-fast delivery with our efficient service,
+                ensuring your orders arrive quickly, safely, and right on time,
+                every time!
+              </p>
             </div>
-            <h2 class="font-bold text-h2 text-center">Fast Delivery</h2>
-            <p class="text-center pb-8">Enjoy lightning-fast delivery with our efficient service, ensuring your orders arrive quickly, safely, and right on time, every time!</p>
-          </div>
 
-          <!-- card 333 -->
-          <div class="card3 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
-            <div class="card-img-container flex justify-center">
-              <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
-                <img src="content/c2-assets/healthy.png" alt="service">
+            <!-- card 333 -->
+            <div class="card3 rounded-2xl space-y-5 bg-[#EFEBE3] px-5">
+              <div class="card-img-container flex justify-center">
+                <div class="w-fit bg-[#fff] z-10 p-3 rounded-full mt-8">
+                  <img src="content/c2-assets/healthy.png" alt="service" />
+                </div>
               </div>
+              <h2 class="font-bold text-h2 text-center">Healthy Products</h2>
+              <p class="text-center pb-8">
+                Discover our premium healthy products, made with natural
+                ingredients, ensuring wellness, freshness, and nutrition for a
+                healthier lifestyle every day
+              </p>
             </div>
-            <h2 class="font-bold text-h2 text-center">Healthy Products</h2>
-            <p class="text-center pb-8">Discover our premium healthy products, made with natural ingredients, ensuring wellness, freshness, and nutrition for a healthier lifestyle every day</p>
-          </div>
-
           </div>
         </div>
-        
       </div>
       <!-- product-section -->
-       <section class="bg-bg-clr my-7 sm:my-10 md:my-14 lg:my-20">
+      <section class="bg-bg-clr my-7 sm:my-10 md:my-14 lg:my-20">
         <div class="product-sec max-w-[1440px] mx-auto">
           <div class="product-wraper mx-3">
             <h1 class="text-h1 text-main-clr pt-14 pb-10">Popular Products</h1>
             <!-- product grid -->
-            <div class="products grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-6 pb-14 justify-center items-center">
+
+            <div
+              class="products grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-6 pb-14 justify-center items-center"
+            >
               <!-- img section -->
-              <div class="left bg-gradient-to-br from-[#53DB3A] to-[#F9DF8A] rounded-xl  relative">
+              <div
+                class="left bg-gradient-to-br from-[#53DB3A] to-[#F9DF8A] rounded-xl relative"
+              >
                 <div class="content pt-8 px-6 lg:p-6">
                   <div>
-                    <h2 class="text-h2 text-white font-bold">
-                      30% off
-                    </h2>
-                    <p class="py-6">Discover a world of treats, toys, and  essentials products for your family</p>
+                    <h2 class="text-h2 text-white font-bold">30% off</h2>
+                    <p class="py-6 w-[20ch]">
+                      Discover a world of treats, toys, and essentials products
+                      for your family
+                    </p>
                     <button class="btn font-bold mb-56 md:mb-48 lg:mb-40">
                       Buy Now
                     </button>
                   </div>
                   <div class="img-wrap absolute right-0 bottom-0">
-                    <img src="content/c2-assets/vegetable-offer.png" alt="offers">
+                    <img
+                      src="content/c2-assets/vegetable-offer.png"
+                      alt="offers"
+                    />
                   </div>
                 </div>
               </div>
@@ -176,9 +244,11 @@
                 <div class="r-wrap grid grid-cols-2 lg:grid-cols-3 gap-4">
                   <!-- products -->
                   <!-- onion -->
-                  <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
                     <div class="img-wrap bg-bg-clr rounded-xl">
-                      <img src="content/c2-assets/image 43.png" alt="onion">
+                      <img src="content/c2-assets/image 43.png" alt="onion" />
                     </div>
                     <div class="content">
                       <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
@@ -187,20 +257,24 @@
                     </div>
                   </div>
                   <!-- tomato -->
-                  <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
                     <div class="img-wrap bg-bg-clr rounded-xl">
-                      <img src="content/c2-assets/image 41.png" alt="Tomato">
+                      <img src="content/c2-assets/image 41.png" alt="Tomato" />
                     </div>
                     <div class="content">
                       <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                      <h3 class="text-h3 font-bold">Tomato 500 g </h3>
+                      <h3 class="text-h3 font-bold">Tomato 500 g</h3>
                       <p class="font-bold">$39.99</p>
                     </div>
                   </div>
                   <!-- potato -->
-                  <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
                     <div class="img-wrap bg-bg-clr rounded-xl">
-                      <img src="content/c2-assets/image 44.png" alt="Potato">
+                      <img src="content/c2-assets/image 44.png" alt="Potato" />
                     </div>
                     <div class="content">
                       <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
@@ -209,240 +283,304 @@
                     </div>
                   </div>
 
-                   <!-- tomato -->
-                   <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
+                  <!-- tomato -->
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
                     <div class="img-wrap bg-bg-clr rounded-xl">
-                      <img src="content/c2-assets/image 41.png" alt="Tomato">
+                      <img src="content/c2-assets/image 41.png" alt="Tomato" />
                     </div>
                     <div class="content">
                       <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                      <h3 class="text-h3 font-bold">Tomato 500 g </h3>
+                      <h3 class="text-h3 font-bold">Tomato 500 g</h3>
                       <p class="font-bold">$39.99</p>
                     </div>
                   </div>
 
-                <!-- onion -->
-                <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
-                  <div class="img-wrap bg-bg-clr rounded-xl">
-                    <img src="content/c2-assets/image 43.png" alt="onion">
+                  <!-- onion -->
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
+                    <div class="img-wrap bg-bg-clr rounded-xl">
+                      <img src="content/c2-assets/image 43.png" alt="onion" />
+                    </div>
+                    <div class="content">
+                      <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
+                      <h3 class="text-h3 font-bold">Onion 1 KG</h3>
+                      <p class="font-bold">$39.99</p>
+                    </div>
                   </div>
-                  <div class="content">
-                    <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                    <h3 class="text-h3 font-bold">Onion 1 KG</h3>
-                    <p class="font-bold">$39.99</p>
-                  </div>
-                </div>
 
-                 <!-- tomato -->
-                 <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
-                  <div class="img-wrap bg-bg-clr rounded-xl">
-                    <img src="content/c2-assets/image 41.png" alt="Tomato">
+                  <!-- tomato -->
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
+                    <div class="img-wrap bg-bg-clr rounded-xl">
+                      <img src="content/c2-assets/image 41.png" alt="Tomato" />
+                    </div>
+                    <div class="content">
+                      <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
+                      <h3 class="text-h3 font-bold">Tomato 500 g</h3>
+                      <p class="font-bold">$39.99</p>
+                    </div>
                   </div>
-                  <div class="content">
-                    <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                    <h3 class="text-h3 font-bold">Tomato 500 g </h3>
-                    <p class="font-bold">$39.99</p>
-                  </div>
-                </div>
-                  
 
-                 <!-- onion -->
-                 <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
-                  <div class="img-wrap bg-bg-clr rounded-xl">
-                    <img src="content/c2-assets/image 43.png" alt="onion">
+                  <!-- onion -->
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
+                    <div class="img-wrap bg-bg-clr rounded-xl">
+                      <img src="content/c2-assets/image 43.png" alt="onion" />
+                    </div>
+                    <div class="content">
+                      <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
+                      <h3 class="text-h3 font-bold">Onion 1 KG</h3>
+                      <p class="font-bold">$39.99</p>
+                    </div>
                   </div>
-                  <div class="content">
-                    <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                    <h3 class="text-h3 font-bold">Onion 1 KG</h3>
-                    <p class="font-bold">$39.99</p>
-                  </div>
-                </div>
 
-                <!-- potato -->
-                <div class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2">
-                  <div class="img-wrap bg-bg-clr rounded-xl">
-                    <img src="content/c2-assets/image 44.png" alt="Potato">
+                  <!-- potato -->
+                  <div
+                    class="products rounded-xl flex items-center justify-center gap-2 bg-white p-2"
+                  >
+                    <div class="img-wrap bg-bg-clr rounded-xl">
+                      <img src="content/c2-assets/image 44.png" alt="Potato" />
+                    </div>
+                    <div class="content">
+                      <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
+                      <h3 class="text-h3 font-bold">Potato 1 KG</h3>
+                      <p class="font-bold">$39.99</p>
+                    </div>
                   </div>
-                  <div class="content">
-                    <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                    <h3 class="text-h3 font-bold">Potato 1 KG</h3>
-                    <p class="font-bold">$39.99</p>
-                  </div>
-                </div>
 
-                <!-- potato -->
-                <div class="products rounded-xl items-center justify-center gap-2 bg-white p-2 hidden lg:flex">
-                  <div class="img-wrap bg-bg-clr rounded-xl">
-                    <img src="content/c2-assets/image 44.png" alt="Potato">
+                  <!-- potato -->
+                  <div
+                    class="products rounded-xl items-center justify-center gap-2 bg-white p-2 hidden lg:flex"
+                  >
+                    <div class="img-wrap bg-bg-clr rounded-xl">
+                      <img src="content/c2-assets/image 44.png" alt="Potato" />
+                    </div>
+                    <div class="content">
+                      <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
+                      <h3 class="text-h3 font-bold">Potato 1 KG</h3>
+                      <p class="font-bold">$39.99</p>
+                    </div>
                   </div>
-                  <div class="content">
-                    <p><i class="fa-solid fa-star text-[#FFC107]"></i> 4.5</p>
-                    <h3 class="text-h3 font-bold">Potato 1 KG</h3>
-                    <p class="font-bold">$39.99</p>
-                  </div>
-                </div>
-
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <!-- arrival and offers -->
+      <section class="max-w-[1440px] mx-auto">
+        <div class="arrival-wrapper mx-2">
+          <h1 class="text-main-clr text-h1 font-bold py-6">Arrival & Offers</h1>
 
-       </section>
-       <!-- arrival and offers -->
-        <section class="max-w-[1440px] mx-auto">
-          <div class="arrival-wrapper mx-2">
-            <h1 class="text-main-clr text-h1 font-bold">Arrival & Offers</h1>
-
-            <div class="arrival grid grid-cols-1 gap-4 md:grid-cols-[1.4fr_1fr]">
-
-              <div class="left bg-[#115414] grid grid-cols-[1.5fr_1fr] gap-1 px-3 py-8 rounded-2xl justify-center items-center">
-                <div class="txt space-y-4">
-                  <div class="img-wrap -translate-x-3">
-                    <img src="content/c2-assets/dawat-logo.png" alt="logo">
-                  </div>
-                  <div class="pl-2 md:pl-4"><button class="btn bg-main-clr text-white border-none">Cook Exotic Dishes</button>
-                    <h2 class="text-h2 text-white">UP to <span class="font-bold">20% OFF</span></h2></div>
+          <div class="arrival grid grid-cols-1 gap-4 md:grid-cols-[1.4fr_1fr]">
+            <div
+              class="left bg-[#115414] grid grid-cols-[1.5fr_1fr] gap-1 px-3 py-8 rounded-2xl justify-center items-center"
+            >
+              <div class="txt space-y-4">
+                <div class="img-wrap -translate-x-3">
+                  <img src="content/c2-assets/dawat-logo.png" alt="logo" />
                 </div>
-                <div class="img">
-                  <div class="img-wrap ">
-                    <img src="content/c2-assets/dawat-mock-up.png" alt="">
-                  </div>
+                <div class="pl-2 md:pl-4">
+                  <button class="btn bg-main-clr text-white border-none">
+                    Cook Exotic Dishes
+                  </button>
+                  <h2 class="text-h2 text-white">
+                    UP to <span class="font-bold">20% OFF</span>
+                  </h2>
                 </div>
               </div>
-
-
-              <div class="right  bg-[#102861] grid grid-cols-[1.5fr_1fr] gap-1 px-3 py-8 rounded-2xl items-center">
-                <div class="txt space-y-4">
-                  <div class="img-wrap">
-                    <img class="" src="content/c2-assets/india-gate-logo.png" alt="logo">
-                  </div>
-                  <button class="btn bg-[#2A4D97] text-white border-none">World’s No.1 Rice</button>
-                  <h2 class="text-h2 text-white">UP to <span class="font-bold">40% OFF</span></h2>
+              <div class="img">
+                <div class="img-wrap">
+                  <img src="content/c2-assets/dawat-mock-up.png" alt="" />
                 </div>
-                <div class="img">
-                  <div class="img-wrap  w-[90%] flex justify-center items-center">
-                    <img class="w-full" src="content/c2-assets/india-gate-mock-up.png" alt="">
-                  </div>
+              </div>
+            </div>
+
+            <div
+              class="right bg-[#102861] grid grid-cols-[1.5fr_1fr] gap-1 px-3 py-8 rounded-2xl items-center"
+            >
+              <div class="txt space-y-4">
+                <div class="img-wrap">
+                  <img
+                    class=""
+                    src="content/c2-assets/india-gate-logo.png"
+                    alt="logo"
+                  />
+                </div>
+                <button class="btn bg-[#2A4D97] text-white border-none">
+                  World’s No.1 Rice
+                </button>
+                <h2 class="text-h2 text-white">
+                  UP to <span class="font-bold">40% OFF</span>
+                </h2>
+              </div>
+              <div class="img">
+                <div class="img-wrap w-[90%] flex justify-center items-center">
+                  <img
+                    class="w-full"
+                    src="content/c2-assets/india-gate-mock-up.png"
+                    alt=""
+                  />
                 </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- flash shale -->
 
-        </section>
-        <!-- flash shale -->
-
-         <section class="bg-bg-clr my-16">
-          <div class="flash max-w-[1440px] mx-auto">
-            <h1 class="  mx-6 text-h1 text-main-clr py-10">Flash Sale</h1>
-            <div class=" mx-6 flash-wrap pb-16 flex  gap-4 flex-col md:flex-row">
-
-              <div class="card flex-1 bg-[#bbf09d48] shadow-xl ">
-                <figure class="justify-center items-center">
-                  <img class="w-[200px]"
-                    src="content/c2-assets/vecteezy_bell-pepper-chili-pepper-vegetable-red-pepper-generative-ai_25273593.png"
-                    alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                  <p class="font-bold">Capsicum</p>
-                  <h2 class="card-title">Price: 20.99 $!</h2>
-                  <div class="card-actions justify-end">
-                    <button class="btn bg-main-clr text-white border-none">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card flex-1 bg-[#bbf09d48] shadow-xl ">
-                <figure class="justify-center items-center">
-                  <img class="w-[200px]"
-                    src="content/c2-assets/vecteezy_carrot-vegetable-food-root-oil_26751479.png"
-                    alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                  <p class="font-bold">Carrot</p>
-                  <h2 class="card-title">Price: 20.99 $!</h2>
-                  <div class="card-actions justify-end">
-                    <button class="btn bg-main-clr text-white border-none">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card flex-1 bg-[#bbf09d48] shadow-xl ">
-                <figure class="justify-center items-center">
-                  <img class="w-[200px]"
-                    src="content/c2-assets/vecteezy_bell-pepper-chili-pepper-vegetable-red-pepper-generative-ai_25273593.png"
-                    alt="Shoes" />
-                </figure>
-                <div class="card-body">
-                  <p class="font-bold">Capsicum</p>
-                  <h2 class="card-title">Price: 20.99 $!</h2>
-                  <div class="card-actions justify-end">
-                    <button class="btn bg-main-clr text-white border-none">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
-              <div class="card flex-1 bg-[#bbf09d48] shadow-xl ">
-                <figure class="justify-center items-center">
-                  <img class="w-[200px]"
-                    src="content/c2-assets/vecteezy_three-red-and-yellow-onion-generative-ai_33221381.png" />
-                </figure>
-                <div class="card-body">
-                  <p class="font-bold">Onion</p>
-                  <h2 class="card-title">Price: 20.99 $!</h2>
-                  <div class="card-actions justify-end">
-                    <button class="btn bg-main-clr text-white border-none">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-         </section>
-    </main>
-
-    <!-- footer section -->
-    <footer class="bg-main-clr w-full min-h-[50vw] mt-[80vw] sm:mt-[55vw] md:mt-[35vw] lg:mt-[30vw] xl:mt-[20vw]">
-      <div class="footer-content max-w-[1440px] mx-auto">
-        <div class="content-wrap mx-6 relative">
-
-
-         <div class="flex justify-center"> <div class="top absolute bg-bg-clr rounded-2xl -translate-y-[50%]">
-          <div class="top-container p-6 sm:py-12 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center">
-            <div class="left flex justify-center items-center">
-              <div class="l-img-container w-[90%] h-[90%]">
-                <img class="w-full" src="content/c2-assets/vegetable-busket.png" alt="basket">
-              </div>
-            </div>
-            <div class="right">
-              <div class="r-wrap space-y-4">
-                <h1 class="text-h1 font-bold text-center text-main-clr sm:hidden">Get Grocery News!</h1>
-                <h1 class="text-h1 font-bold text-center hidden sm:block">Get Grocery News!</h1>
-                <p class="text-center">Exclusive training tips, ticks, product deals and more.</p>
-                <div class="flex flex-col gap-6 lg:flex-row lg:gap-2">
-                  <div class="text-center flex-1">
-                  <input class="pl-4 w-[100%] leading-10 rounded-md" type="text" name="email" id="email" placeholder="Enter email ...">
-                </div>
-                <div class="text-center">
-                  <button class="btn bg-main-clr text-white">
-                    Subscribe
+      <section class="bg-bg-clr my-16">
+        <div class="flash max-w-[1440px] mx-auto">
+          <h1 class="mx-6 text-h1 text-main-clr py-10">Flash Sale</h1>
+          <div class="mx-6 flash-wrap pb-16 flex gap-4 flex-col md:flex-row">
+            <div class="card flex-1 bg-[#bbf09d48] shadow-xl">
+              <figure class="justify-center items-center">
+                <img
+                  class="w-[200px]"
+                  src="content/c2-assets/vecteezy_bell-pepper-chili-pepper-vegetable-red-pepper-generative-ai_25273593.png"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="font-bold">Capsicum</p>
+                <h2 class="card-title">Price: 20.99 $!</h2>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-main-clr text-white border-none">
+                    Buy Now
                   </button>
                 </div>
               </div>
+            </div>
+
+            <div class="card flex-1 bg-[#bbf09d48] shadow-xl">
+              <figure class="justify-center items-center">
+                <img
+                  class="w-[200px]"
+                  src="content/c2-assets/vecteezy_carrot-vegetable-food-root-oil_26751479.png"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="font-bold">Carrot</p>
+                <h2 class="card-title">Price: 20.99 $!</h2>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-main-clr text-white border-none">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card flex-1 bg-[#bbf09d48] shadow-xl">
+              <figure class="justify-center items-center">
+                <img
+                  class="w-[200px]"
+                  src="content/c2-assets/vecteezy_bell-pepper-chili-pepper-vegetable-red-pepper-generative-ai_25273593.png"
+                  alt="Shoes"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="font-bold">Capsicum</p>
+                <h2 class="card-title">Price: 20.99 $!</h2>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-main-clr text-white border-none">
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="card flex-1 bg-[#bbf09d48] shadow-xl">
+              <figure class="justify-center items-center">
+                <img
+                  class="w-[200px]"
+                  src="content/c2-assets/vecteezy_three-red-and-yellow-onion-generative-ai_33221381.png"
+                />
+              </figure>
+              <div class="card-body">
+                <p class="font-bold">Onion</p>
+                <h2 class="card-title">Price: 20.99 $!</h2>
+                <div class="card-actions justify-end">
+                  <button class="btn bg-main-clr text-white border-none">
+                    Buy Now
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div></div>
+        </div>
+      </section>
+    </main>
 
+    <!-- footer section -->
+    <footer
+      class="bg-main-clr w-full min-h-[50vw] mt-[90vw] sm:mt-[55vw] md:mt-[35vw] lg:mt-[30vw] xl:mt-[20vw]"
+    >
+      <div class="footer-content max-w-[1440px] mx-auto">
+        <div class="content-wrap mx-6 relative">
+          <div class="flex justify-center">
+            <div class="top absolute bg-bg-clr rounded-2xl -translate-y-[50%]">
+              <div
+                class="top-container p-6 sm:py-12 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center"
+              >
+                <div class="left flex justify-center items-center">
+                  <div class="l-img-container w-[90%] h-[90%]">
+                    <img
+                      class="w-full"
+                      src="content/c2-assets/vegetable-busket.png"
+                      alt="basket"
+                    />
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="r-wrap space-y-4">
+                    <h1
+                      class="text-h1 font-bold text-center text-main-clr sm:hidden"
+                    >
+                      Get Grocery News!
+                    </h1>
+                    <h1 class="text-h1 font-bold text-center hidden sm:block">
+                      Get Grocery News!
+                    </h1>
+                    <p class="text-center">
+                      Exclusive training tips, ticks, product deals and more.
+                    </p>
+                    <div class="flex flex-col gap-6 lg:flex-row lg:gap-2">
+                      <div class="text-center flex-1">
+                        <input
+                          class="pl-4 w-[100%] leading-10 rounded-md"
+                          type="text"
+                          name="email"
+                          id="email"
+                          placeholder="Enter email ..."
+                        />
+                      </div>
+                      <div class="text-center">
+                        <button class="btn bg-main-clr text-white">
+                          Subscribe
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <div class="bottom pt-[22rem] pb-20">
             <div class="bottom-wrap md:flex md:justify-between items-end">
               <div class="start">
                 <div class="logo-wrap">
-                  <img src="content/c2-assets/logo-footer.png" alt="logo">
+                  <img src="content/c2-assets/logo-footer.png" alt="logo" />
                 </div>
                 <p class="w-[25ch] text-white py-6">
-                  Discover a world of treats, toys, and essentials handpicked for your furry friends
+                  Discover a world of treats, toys, and essentials handpicked
+                  for your furry friends
                 </p>
               </div>
 
@@ -462,7 +600,6 @@
                   <i class="text-white fa-brands fa-linkedin"></i>
                   <i class="text-white fa-brands fa-youtube"></i>
                 </div>
-
               </div>
             </div>
           </div>
