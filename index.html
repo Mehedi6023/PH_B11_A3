@@ -35,7 +35,7 @@
    
                  h2: "clamp(1.5rem, 1.3819742489270386rem + 0.6866952789699571vw, 2rem)",
    
-                 h3: "clamp(1rem, 0.95rem + 0.25vw, 1.25rem)",
+                 h3: "clamp(1.25rem, 0.95rem + 0.25vw, 1.25rem)",
                },
              },
            },
@@ -404,26 +404,67 @@
     <!-- footer section -->
     <footer class="bg-main-clr w-full min-h-[50vw] mt-[80vw] sm:mt-[55vw] md:mt-[35vw] lg:mt-[30vw] xl:mt-[20vw]">
       <div class="footer-content max-w-[1440px] mx-auto">
-        <div class="content-wrap mx-6 relative flex justify-center">
-          <div class="absolute -translate-y-[50%] bg-bg-clr rounded-2xl">
-            <div class="top-container p-6 sm:py-12 md:p-16 grid grid-cols-1 md:grid-cols-2">
-              <div class="left flex justify-center items-center">
-                <div class="l-img-container w-[90%] h-[90%]">
-                  <img class="w-full" src="content/c2-assets/vegetable-busket.png" alt="basket">
+        <div class="content-wrap mx-6 relative">
+
+
+         <div class="flex justify-center"> <div class="top absolute bg-bg-clr rounded-2xl -translate-y-[50%]">
+          <div class="top-container p-6 sm:py-12 md:p-16 grid grid-cols-1 md:grid-cols-2 items-center">
+            <div class="left flex justify-center items-center">
+              <div class="l-img-container w-[90%] h-[90%]">
+                <img class="w-full" src="content/c2-assets/vegetable-busket.png" alt="basket">
+              </div>
+            </div>
+            <div class="right">
+              <div class="r-wrap space-y-4">
+                <h1 class="text-h1 font-bold text-center text-main-clr sm:hidden">Get Grocery News!</h1>
+                <h1 class="text-h1 font-bold text-center hidden sm:block">Get Grocery News!</h1>
+                <p class="text-center">Exclusive training tips, ticks, product deals and more.</p>
+                <div class="flex flex-col gap-6 lg:flex-row lg:gap-2">
+                  <div class="text-center flex-1">
+                  <input class="pl-4 w-[100%] leading-10 rounded-md" type="text" name="email" id="email" placeholder="Enter email ...">
+                </div>
+                <div class="text-center">
+                  <button class="btn bg-main-clr text-white">
+                    Subscribe
+                  </button>
                 </div>
               </div>
-              <div class="right">
-                <div class="r-wrap space-y-4">
-                  <h1 class="text-h1 font-bold text-center">Get Grocery News!</h1>
-                  <p class="text-center">Exclusive training tips, ticks, product deals and more.</p>
-                  <div class="text-center"><input class="pl-4 w-[80%] leading-10 rounded-md" type="text" name="email" id="email" placeholder="Enter email ..."></div>
-                  <div class="text-center"><button class="btn bg-main-clr text-white">Subscribe</button></div>
-                </div>
               </div>
             </div>
           </div>
-          <div class="bottom">
+        </div></div>
 
+
+          <div class="bottom pt-[22rem] pb-20">
+            <div class="bottom-wrap md:flex md:justify-between items-end">
+              <div class="start">
+                <div class="logo-wrap">
+                  <img src="content/c2-assets/logo-footer.png" alt="logo">
+                </div>
+                <p class="w-[25ch] text-white py-6">
+                  Discover a world of treats, toys, and essentials handpicked for your furry friends
+                </p>
+              </div>
+
+              <div class="middle my-6">
+                <ul class="space-y-6">
+                  <li class="text-white">Product</li>
+                  <li class="text-white">Services</li>
+                  <li class="text-white">Contact us</li>
+                </ul>
+              </div>
+
+              <div class="end">
+                <h3 class="text-white text-h3">Follow Us</h3>
+                <div class="space-x-4">
+                  <i class="text-white fa-brands fa-facebook"></i>
+                  <i class="text-white fa-brands fa-square-instagram"></i>
+                  <i class="text-white fa-brands fa-linkedin"></i>
+                  <i class="text-white fa-brands fa-youtube"></i>
+                </div>
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
